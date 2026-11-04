@@ -1,0 +1,24 @@
+; Godot 4 project settings
+config_version=5
+
+[application]
+config/name="The Castle 2.5D"
+run/main_scene="res://scenes/main.tscn"
+
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[input]
+move_left={"deadzone":0.5,"events":[Object(InputEventKey,"keycode":65),Object(InputEventKey,"keycode":4194311)]}
+move_right={"deadzone":0.5,"events":[Object(InputEventKey,"keycode":68),Object(InputEventKey,"keycode":4194321)]}
+jump={"deadzone":0.5,"events":[Object(InputEventKey,"keycode":32)]}
+
+[physics]
+3d/default_gravity=24.0
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.055,0.07,0.12,1)

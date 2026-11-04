@@ -17,14 +17,15 @@ Physics push blocks are in the first room. Falling below it returns the player t
 
 ## Project map
 
-- `AGENTS.md` â€” instructions for coding agents
-- `docs/GAME_DESIGN.md` â€” game concept, pillars, and reference notes
-- `docs/TECHNICAL_DESIGN.md` â€” engine, physics, and scene architecture
-- `docs/CONTROLS.md` â€” current keyboard controls
-- `docs/plans/ROADMAP.md` â€” milestones and acceptance criteria
-- `docs/decisions/` â€” recorded technical decisions
-- `CONTRIBUTING.md` â€” workflow and content guidelines
-- `CHANGELOG.md` â€” player-facing changes
+- `AGENTS.md` — instructions for coding agents
+- `docs/GAME_DESIGN.md` — game concept and references
+- `docs/TECHNICAL_DESIGN.md` — engine, physics, and scene architecture
+- `docs/plans/ROADMAP.md` — milestones and acceptance criteria
+- `docs/SPEC_KIT.md` — Spec Kit workflow
+- `.specify/memory/constitution.md` — project principles
+- `specs/001-playable-movement/` — first feature specification, plan, and tasks
+- `CONTRIBUTING.md` — workflow and content guidelines
+- `CHANGELOG.md` — player-facing changes
 
 ## License
 
