@@ -1,6 +1,6 @@
 # Roadmap
 
-For the proposed six-room first chapter and implementation phases, see [Walkthrough-inspired game plan](WALKTHROUGH_INSPIRED_PLAN.md).
+The long-term design targets 99 rooms. Start with the nine-room 3×3 section, where the map is a pickup found in a room; see [Walkthrough-inspired game plan](WALKTHROUGH_INSPIRED_PLAN.md).
 
 ## 1. Playable movement slice — in progress
 - [x] Move left and right
@@ -18,7 +18,8 @@ For the proposed six-room first chapter and implementation phases, see [Walkthro
 
 ## 3. Castle exploration
 - [ ] Store room connections as data rather than hard-coded geometry
-- [ ] Add a simple map of visited rooms
+- [ ] Start without a map; add a map pickup and reveal discovered rooms after finding it
+- [ ] Build and playtest a complete 3×3 section before scaling toward 99 rooms
 - [ ] Add one original hazard with clear warning and reset behavior
 
 ## 4. Presentation and release
