@@ -14,7 +14,7 @@ Explore a room → notice a blocked route or useful object → move, jump, or re
 
 ## Reference notes
 - The original *The Castle* is described as having 100 rooms, with keys for matching doors, movable puzzle objects, hazards, and a 10×10 map. In the MSX walkthrough, the player finds a map early and it starts marking rooms passed.
-- Those mechanics inform broad design principles only. This project uses original room layouts, objects, art, names, and progression. Its first prototype is a 3×3 section, with 99 rooms as the current project target (the original has 100).
+- Those mechanics inform broad design principles only. This project uses original room layouts, objects, art, names, and progression. Its current target is 100 rooms, built incrementally from a 3×3 prototype.
 - Player-provided walkthrough video: https://www.youtube.com/watch?v=ZoaRf6OIHfo
 - Background reference: https://en.wikipedia.org/wiki/The_Castle_(video_game)
 - Detailed research and the proposed 3×3 progression: [Walkthrough-inspired game plan](plans/WALKTHROUGH_INSPIRED_PLAN.md).

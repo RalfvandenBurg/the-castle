@@ -1,6 +1,6 @@
 # Roadmap
 
-The project targets 99 rooms, starting with a nine-room 3×3 section. The map is a pickup found in a room. Source notes and the plan are in [Walkthrough-inspired game plan](WALKTHROUGH_INSPIRED_PLAN.md).
+The project targets 100 rooms, starting with a nine-room 3×3 section. The map is a pickup found in a room. Source notes and the plan are in [Walkthrough-inspired game plan](WALKTHROUGH_INSPIRED_PLAN.md).
 
 ## 1. Playable movement slice — in progress
 - [x] Move left and right

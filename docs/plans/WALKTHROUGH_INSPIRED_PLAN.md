@@ -2,7 +2,7 @@
 
 ## Doel
 
-Het project begint met een speelbare 3×3-sectie van negen kamers en heeft voorlopig 99 kamers als langetermijndoel. Ter vergelijking: de geraadpleegde documentatie beschrijft het origineel als 100 kamers/schermen, op een 10×10-kaart. De 99 kamers zijn dus onze eigen scopekeuze, geen feit over het origineel. De walkthrough van het origineel is een referentie voor verkennen, teruglopen, objecten verplaatsen, sleutels vinden en routes openen. We nemen geen bestaande kamers, sprites, namen of exacte puzzeloplossingen over.
+Het project begint met een speelbare 3×3-sectie van negen kamers en heeft 100 kamers als langetermijndoel. De walkthrough van het origineel beschrijft ook 100 schermen, georganiseerd op een 10×10-kaart. De walkthrough is een referentie voor verkennen, teruglopen, objecten verplaatsen, sleutels vinden en routes openen. We nemen geen bestaande kamers, sprites, namen of exacte puzzeloplossingen over.
 
 Referentie: [The Castle walkthrough (YouTube)](https://www.youtube.com/watch?v=ZoaRf6OIHfo)
 
@@ -30,7 +30,7 @@ Dit zijn bronbeschrijvingen van het origineel, geen opdracht om die specifieke k
 
 ## Eerste speelbare sectie: 3×3 kamers
 
-De 3×3 is een compacte proefsectie binnen het eigen beoogde kasteel van 99 kamers. De coördinaten hieronder zijn alleen een nieuw voorstel; ze reconstrueren geen originele kaart.
+De 3×3 is een compacte proefsectie binnen het beoogde kasteel van 100 kamers. De coördinaten hieronder zijn alleen een nieuw voorstel; ze reconstrueren geen originele kaart.
 
 | Rij / kolom | Kamer | Rol en uitdaging | Beloning of verbinding |
 | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ De negen kamers vormen een orthogonaal 3×3-raster. Niet iedere aangrenzende kam
 - De kaart wordt in de Kaartkamer als fysiek voorwerp gevonden en blijft daarna beschikbaar. Dit houdt het principe van een vindbare kaart uit de referentie aan, maar gebruikt een nieuwe locatie en route.
 - Bij het vinden wordt de kaart bruikbaar, maar onbekende kamers/verbindingen onthullen zich pas wanneer de speler ze ontdekt.
 - Een kaartmarkering toont huidige kamer, bezochte kamers, bekende deuren en bekende blokkades. Ze geeft geen puzzeloplossingen.
-- De kaartprogressie moet ook schaalbaar zijn naar het eigen latere doel van 99 kamers.
+- De kaartprogressie moet ook schaalbaar zijn naar het latere doel van 100 kamers.
 
 ## Werkfasen
 
@@ -95,11 +95,11 @@ De negen kamers vormen een orthogonaal 3×3-raster. Niet iedere aangrenzende kam
 - Speeltest uitvoeren: navigeer eerst zonder kaart naar de kaartkamer en voltooi daarna de sectie met kaart.
 - Acceptatie: de route is zonder walkthrough oplosbaar en de kaart helpt oriënteren zonder antwoorden weg te geven.
 
-### Fase 7 — Uitbreiden richting 99 kamers
+### Fase 7 — Uitbreiden richting 100 kamers
 
 - Kamers en verbindingen volledig data-gedreven houden; de 3×3 is één deelgebied, niet de finale schaal.
 - Nieuwe delen toevoegen met herkenbare thema's en terugkerende maar gevarieerde spelregels.
-- Kaart, save-data en room transitions controleren op groei naar 99 unieke kamers.
+- Kaart, save-data en room transitions controleren op groei naar 100 unieke kamers.
 
 ### Fase 8 — Presentatie
 
@@ -118,7 +118,7 @@ De negen kamers vormen een orthogonaal 3×3-raster. Niet iedere aangrenzende kam
 
 ## Buiten scope voor de eerste 3×3-versie
 
-- Alle 99 kamers in één keer bouwen of exact namaken.
+- Alle 100 kamers in één keer bouwen of exact namaken.
 - Originele sprites, geluiden, namen, verhaaltekst of puzzellayouts overnemen.
 - Een grote vijand-AI, uitgebreide inventaris of save-slotsysteem bouwen voordat de 3×3-route werkt.
 
