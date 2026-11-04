@@ -1,5 +1,7 @@
 # Roadmap
 
+For the proposed six-room first chapter and implementation phases, see [Walkthrough-inspired game plan](WALKTHROUGH_INSPIRED_PLAN.md).
+
 ## 1. Playable movement slice — in progress
 - [x] Move left and right
 - [x] Jump with gravity
