@@ -24,6 +24,7 @@ Physics push blocks are in the first room. Falling below it returns the player t
 - `docs/SPEC_KIT.md` — Spec Kit workflow
 - `.specify/memory/constitution.md` — project principles
 - `specs/001-playable-movement/` — first feature specification, plan, and tasks
+- `specs/002-castle-section/` — planned original 3×3 section: specification, design, tasks and validation guide
 - `CONTRIBUTING.md` — workflow and content guidelines
 - `CHANGELOG.md` — player-facing changes
 

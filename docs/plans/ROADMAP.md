@@ -2,6 +2,10 @@
 
 The project targets 100 rooms, starting with a nine-room 3×3 section. The map is a pickup found in a room. Source notes and the plan are in [Walkthrough-inspired game plan](WALKTHROUGH_INSPIRED_PLAN.md).
 
+## Active planning package
+
+The [nine-room feature](../../specs/002-castle-section/spec.md) now defines the 3×3 scope. Its [plan](../../specs/002-castle-section/plan.md) and [25 pending implementation tasks](../../specs/002-castle-section/tasks.md) deliver a two-room MVP first, then locks/backtracking, the found map, and the full section. Planning does not mark the gameplay milestones below complete.
+
 ## 1. Playable movement slice — in progress
 - [x] Move left and right
 - [x] Jump with gravity
