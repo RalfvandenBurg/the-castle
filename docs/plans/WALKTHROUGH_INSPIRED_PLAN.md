@@ -2,7 +2,7 @@
 
 ## Doel
 
-Het uiteindelijke spel krijgt een kasteel met 99 kamers. We bouwen en testen dat kasteel stap voor stap, te beginnen met een speelbare 3×3-sectie van negen kamers. De walkthrough van het originele *The Castle* is een referentie voor verkennen, teruglopen, objecten verplaatsen, sleutels vinden en routes openen. We nemen geen bestaande kamers, sprites, namen of exacte puzzeloplossingen over.
+Het project begint met een speelbare 3×3-sectie van negen kamers en heeft voorlopig 99 kamers als langetermijndoel. Ter vergelijking: de geraadpleegde documentatie beschrijft het origineel als 100 kamers/schermen, op een 10×10-kaart. De 99 kamers zijn dus onze eigen scopekeuze, geen feit over het origineel. De walkthrough van het origineel is een referentie voor verkennen, teruglopen, objecten verplaatsen, sleutels vinden en routes openen. We nemen geen bestaande kamers, sprites, namen of exacte puzzeloplossingen over.
 
 Referentie: [The Castle walkthrough (YouTube)](https://www.youtube.com/watch?v=ZoaRf6OIHfo)
 
@@ -18,9 +18,19 @@ Referentie: [The Castle walkthrough (YouTube)](https://www.youtube.com/watch?v=Z
 - Een val of fout herstelt de speler voorspelbaar bij de kamerstart of checkpoint.
 - De 2.5D-diepte is visueel; gameplay en botsingen blijven in het afgesproken X/Y-vlak.
 
+## Wat de documentatie over het origineel beschrijft
+
+- De MSX Solutions-walkthrough noemt 100 schermen en behandelt voorwerpen, vijanden en de route naar de prinses. Het adviseert de walkthrough samen met de kaart te gebruiken.
+- De walkthrough laat de speler eerst een sleutel vinden en een deur openen; kort daarna wordt de kaart opgepakt. Daarna markeert de kaart bezochte kamers.
+- De Wikipedia-beschrijving noemt een 10×10-kaart, gekleurde sleutels voor overeenkomende deuren en sleutels die uit de inventaris verdwijnen wanneer ze worden gebruikt.
+- Kamers vragen soms om blokken of andere objecten op de juiste plek te schuiven. De walkthrough beschrijft ook liften/verplaatsbare platforms en gevaren zoals spikes en bewegende vijanden.
+- Een andere spelevaluatie beschrijft teruglopen als een terugkerend gevolg van het nog niet hebben van de juiste sleutel. Dat ondersteunt lussen en alternatieve routes in onze eigen 3×3.
+
+Dit zijn bronbeschrijvingen van het origineel, geen opdracht om die specifieke kamers, objecten, personages of kaartmarkeringen over te nemen. Voor onze versie nemen we de onderliggende ontwerpprincipes over: verkennen, routes onthouden, leesbare sleutel-deurregels en fysieke puzzels. Onze kaart verschijnt pas nadat de speler hem gevonden heeft; we laten geen einddoel of puzzeloplossingen zien.
+
 ## Eerste speelbare sectie: 3×3 kamers
 
-De 3×3 is een compacte proefsectie binnen een groter kasteel van 99 kamers. De coördinaten hieronder zijn alleen een nieuw voorstel; ze reconstrueren geen originele kaart.
+De 3×3 is een compacte proefsectie binnen het eigen beoogde kasteel van 99 kamers. De coördinaten hieronder zijn alleen een nieuw voorstel; ze reconstrueren geen originele kaart.
 
 | Rij / kolom | Kamer | Rol en uitdaging | Beloning of verbinding |
 | --- | --- | --- | --- |
@@ -39,10 +49,10 @@ De 3×3 is een compacte proefsectie binnen een groter kasteel van 99 kamers. De 
 De negen kamers vormen een orthogonaal 3×3-raster. Niet iedere aangrenzende kamer is vanaf het begin bereikbaar: een afgesloten deur of eenrichtingsval maakt de route interessant. Minimaal één lus verbindt de Opslagkelder terug met de Poortkamer, zodat teruglopen functioneel is.
 
 - Voor de kaart: geen kaartscherm of raster-HUD; onthoud waar je bent geweest aan de hand van unieke visuele herkenningspunten.
-- De kaart wordt in de Kaartkamer als fysiek voorwerp gevonden en blijft daarna beschikbaar.
+- De kaart wordt in de Kaartkamer als fysiek voorwerp gevonden en blijft daarna beschikbaar. Dit houdt het principe van een vindbare kaart uit de referentie aan, maar gebruikt een nieuwe locatie en route.
 - Bij het vinden wordt de kaart bruikbaar, maar onbekende kamers/verbindingen onthullen zich pas wanneer de speler ze ontdekt.
 - Een kaartmarkering toont huidige kamer, bezochte kamers, bekende deuren en bekende blokkades. Ze geeft geen puzzeloplossingen.
-- De kaartprogressie moet ook schaalbaar zijn naar het latere doel van 99 kamers.
+- De kaartprogressie moet ook schaalbaar zijn naar het eigen latere doel van 99 kamers.
 
 ## Werkfasen
 
@@ -61,6 +71,7 @@ De negen kamers vormen een orthogonaal 3×3-raster. Niet iedere aangrenzende kam
 ### Fase 3 — Eerste puzzelketen en teruglopen
 
 - Duwbaar krat, oppakbare sleutel, bijpassend slot en eenvoudige inventarisindicator toevoegen.
+- Voorstel om te testen: gekleurde sleutel opent alleen het bijpassende slot en wordt daarna verbruikt.
 - Een gesloten route openen en een lus naar een eerdere kamer maken.
 - Acceptatie: sleutelstatus en deuropening blijven behouden na kamerwissels.
 
@@ -113,7 +124,7 @@ De negen kamers vormen een orthogonaal 3×3-raster. Niet iedere aangrenzende kam
 
 ## Open ontwerpbeslissingen
 
-- Wordt een sleutel verbruikt bij het openen van een deur, of blijft die permanent geldig?
+- Behouden we het origineel-achtige gedrag waarbij een sleutel wordt verbruikt, of willen we sleutels permanent laten werken?
 - Bewaren we blokposities bij het wisselen van kamer?
 - Toont de kaart alleen bezochte kamers, of ook lege contouren van naburige onbekende kamers?
 - Welke thema- en verhaalrichting maakt dit project herkenbaar als eigen werk?
@@ -121,5 +132,7 @@ De negen kamers vormen een orthogonaal 3×3-raster. Niet iedere aangrenzende kam
 ## Bronnotities
 
 - De user-provided walkthrough is gekoppeld hierboven. Omdat de videostream hier niet kon worden uitgelezen, zijn de negen kamers en hun volgorde een nieuw voorstel, geen claims over de exacte inhoud van de video.
-- [MSX Resource Center: The Castle walkthrough](https://www.msx.org/news/websites/en/castle-walkthrough) beschrijft de walkthrough als een gids voor de grote kamer- en doolhofstructuur en verwijst door naar MSX Solutions.
-- [The Castle (video game), Wikipedia](https://en.wikipedia.org/wiki/The_Castle_(video_game)) vat het spel samen als een puzzel-platformgame met een kasteel van kamers.
+- [MSX Solutions: The Castle walkthrough (PDF)](https://msxsolutions.msxblue.com/walks/castle.pdf) — primaire bron voor de walkthrough; noemt 100 schermen, de kaart, items, vijanden en voorbeeldoplossingen.
+- [The Castle (video game), Wikipedia](https://en.wikipedia.org/wiki/The_Castle_(video_game)) — overzicht van de 100 kamers, 10×10-kaart, objectpuzzels en verbruikte sleutels.
+- [Generation MSX: The Castle](https://generation-msx.nl/software/ascii-corporation/the-castle/752) — catalogusvermelding met spelbeschrijving en publicatiereferenties.
+- [The Castle (SG-1000, 1986), Sega Does](https://segadoes.com/2014/10/05/the-castle/) — secundaire gameplaybeschrijving van kaartgebruik, teruglopen, sleutels en langzaam leren omgaan met sprong en vijanden.

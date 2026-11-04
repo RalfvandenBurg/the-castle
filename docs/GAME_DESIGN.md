@@ -13,9 +13,11 @@ An original 2.5D puzzle-platform adventure set in a connected castle. The player
 Explore a room → notice a blocked route or useful object → move, jump, or reposition objects → unlock or reach the exit → enter the next room.
 
 ## Reference notes
-- The 1985 *The Castle* is a room-based puzzle-platform game. Public descriptions mention movable objects, matching keys and doors, hazards, and a map of connected rooms.
+- The original *The Castle* is described as having 100 rooms, with keys for matching doors, movable puzzle objects, hazards, and a 10×10 map. In the MSX walkthrough, the player finds a map early and it starts marking rooms passed.
+- Those mechanics inform broad design principles only. This project uses original room layouts, objects, art, names, and progression. Its first prototype is a 3×3 section, with 99 rooms as the current project target (the original has 100).
 - Player-provided walkthrough video: https://www.youtube.com/watch?v=ZoaRf6OIHfo
 - Background reference: https://en.wikipedia.org/wiki/The_Castle_(video_game)
+- Detailed research and the proposed 3×3 progression: [Walkthrough-inspired game plan](plans/WALKTHROUGH_INSPIRED_PLAN.md).
 
 Use references to understand the broad play pattern. Build new room layouts, dialogue, art, names, and level progression for this project.
 
