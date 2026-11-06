@@ -45,12 +45,14 @@ func _build_skeleton() -> void:
 	_add_bone("right_leg", "pelvis", Vector3(0.17, -0.36, 0.0))
 	_add_bone("right_foot", "right_leg", Vector3(0.0, -0.30, 0.03))
 
+	skeleton.reset_bone_poses()
 	skeleton.force_update_all_bone_transforms()
 	for bone_name in _bone_indices:
 		var attachment := BoneAttachment3D.new()
 		attachment.name = "Attach_" + bone_name
-		attachment.bone_name = bone_name
 		skeleton.add_child(attachment)
+		attachment.bone_idx = int(_bone_indices[bone_name])
+		attachment.bone_name = bone_name
 		_attachments[bone_name] = attachment
 
 func _add_bone(bone_name: String, parent_name: String, local_position: Vector3) -> void:
