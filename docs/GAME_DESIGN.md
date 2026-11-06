@@ -22,7 +22,7 @@ Explore a room → notice a blocked route or useful object → move, jump, or re
 Use references to understand the broad play pattern. Build new room layouts, dialogue, art, names, and level progression for this project.
 
 ## Current vertical slice
-The first room demonstrates horizontal movement, jumping, a fixed 2.5D lane, physics push blocks, and respawning after a fall. It is a mechanics prototype, not a recreation of an original room.
+The first room demonstrates horizontal movement, jumping, a fixed 2.5D lane, physics push blocks, and respawning after a fall. The player is an original low-poly fantasy adventurer built from Godot meshes. The room is a mechanics prototype, not a recreation of an original room.
 
 ## Open design questions
 - What is the player's main goal and who or what is being rescued?

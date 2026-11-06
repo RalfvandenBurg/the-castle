@@ -8,6 +8,7 @@ extends CharacterBody3D
 @export var fall_limit: float = -8.0
 
 var spawn_position: Vector3
+@onready var character_visual: Node3D = $Visuals
 
 func _ready() -> void:
 	spawn_position = global_position
@@ -19,6 +20,8 @@ func _physics_process(delta: float) -> void:
 		return
 
 	var direction := Input.get_axis("move_left", "move_right")
+	if not is_zero_approx(direction):
+		character_visual.scale.x = signf(direction)
 	var acceleration := ground_acceleration if is_on_floor() else air_acceleration
 	velocity.x = move_toward(velocity.x, direction * move_speed, acceleration * delta)
 

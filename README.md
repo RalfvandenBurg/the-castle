@@ -20,6 +20,7 @@ Physics push blocks are in the first room. Falling below it returns the player t
 - `AGENTS.md` — instructions for coding agents
 - `docs/GAME_DESIGN.md` — game concept and references
 - `docs/TECHNICAL_DESIGN.md` — engine, physics, and scene architecture
+- `scenes/hero_visual.tscn` — reusable low-poly adventurer model
 - `docs/plans/ROADMAP.md` — milestones and acceptance criteria
 - `docs/SPEC_KIT.md` — Spec Kit workflow
 - `.specify/memory/constitution.md` — project principles

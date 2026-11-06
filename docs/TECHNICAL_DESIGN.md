@@ -9,7 +9,7 @@
 - X: horizontal movement
 - Y: vertical movement and gravity
 - Z: fixed gameplay lane
-- Player: `CharacterBody3D` with explicit acceleration, jump velocity, and fall recovery.
+- Player: `CharacterBody3D` with explicit acceleration, jump velocity, and fall recovery; collision stays capsule-shaped while visuals come from a separate reusable scene.
 - Pushable puzzle objects: `RigidBody3D` with Z translation and rotation constrained.
 - Floors and platforms: `StaticBody3D` with matching collision and visual geometry.
 
@@ -17,6 +17,7 @@
 - `scenes/main.tscn`: main scene entry point.
 - `scripts/room.gd`: builds the current prototype room, camera, input map, platforms, push blocks, and player.
 - `scripts/player.gd`: player movement, jumping, plane constraint, and fall recovery.
+- `scenes/hero_visual.tscn` and `scripts/hero_visual.gd`: reusable, original low-poly adventurer assembled from built-in 3D meshes.
 
 ## Planned scene evolution
 As the prototype grows, move room geometry to reusable scenes, add a room-transition/controller layer, and keep player, puzzle objects, doors, and UI as separate systems. Add new abstractions only when multiple rooms need them.

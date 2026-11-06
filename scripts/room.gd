@@ -1,6 +1,7 @@
 extends Node3D
 
 const PLAYER_SCRIPT := preload("res://scripts/player.gd")
+const HERO_VISUAL_SCENE := preload("res://scenes/hero_visual.tscn")
 
 func _ready() -> void:
 	_setup_controls()
@@ -93,24 +94,19 @@ func _add_player(at: Vector3) -> void:
 	player.name = "Player"
 	player.position = at
 	player.script = PLAYER_SCRIPT
-	add_child(player)
 
 	var capsule := CapsuleShape3D.new()
 	capsule.radius = 0.38
-	capsule.height = 1.6
+	capsule.height = 2.5
 	var collision := CollisionShape3D.new()
 	collision.shape = capsule
-	collision.position.y = 0.8
+	collision.position.y = 1.25
 	player.add_child(collision)
 
-	var mesh := CapsuleMesh.new()
-	mesh.radius = 0.38
-	mesh.height = 1.6
-	var visual := MeshInstance3D.new()
-	visual.mesh = mesh
-	visual.position.y = 0.8
-	visual.material_override = _material(Color("#70c4c5"))
-	player.add_child(visual)
+	var visuals := HERO_VISUAL_SCENE.instantiate()
+	visuals.name = "Visuals"
+	player.add_child(visuals)
+	add_child(player)
 
 func _material(color: Color) -> StandardMaterial3D:
 	var material := StandardMaterial3D.new()

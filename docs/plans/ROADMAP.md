@@ -8,6 +8,7 @@ The project targets 100 rooms, starting with a nine-room 3×3 section. The map i
 - [x] Keep the player on a 2.5D lane
 - [x] Push physics blocks
 - [x] Recover after falling
+- [x] Replace the placeholder capsule with an original 3D adventurer model
 - [ ] Tune movement and camera after hands-on play
 
 ## 2. Room puzzle slice
