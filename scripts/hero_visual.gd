@@ -92,15 +92,15 @@ func _build_model() -> void:
 	_add_sphere(head, Vector3.ZERO, Vector3(0.29, 0.34, 0.27), skin)
 	# Put one small eye on each side so the face reads from either movement direction.
 	for side in [-1.0, 1.0]:
-		_add_sphere(head, Vector3(side * 0.235, 0.045, 0.075), Vector3(0.035, 0.05, 0.045), Color("#243542"))
-		_add_sphere(head, Vector3(side * 0.238, 0.085, 0.075), Vector3(0.04, 0.018, 0.05), hair.darkened(0.18))
-	_add_sphere(head, Vector3(0.0, -0.045, 0.245), Vector3(0.065, 0.055, 0.06), skin)
+		_add_sphere(head, Vector3(side * 0.145, 0.035, 0.065), Vector3(0.04, 0.05, 0.045), Color("#243542"))
+		_add_sphere(head, Vector3(side * 0.145, 0.078, 0.065), Vector3(0.043, 0.018, 0.05), hair.darkened(0.18))
+	_add_sphere(head, Vector3(0.0, -0.045, 0.15), Vector3(0.06, 0.05, 0.055), skin)
 	_add_sphere(head, Vector3(0.0, 0.18, -0.035), Vector3(0.28, 0.15, 0.24), hair)
 	_add_sphere(head, Vector3(0.0, 0.14, 0.16), Vector3(0.22, 0.09, 0.08), hair)
 	_add_cylinder(head, 0.29, 0.29, 0.075, Vector3(0.0, 0.265, 0.0), tunic)
 	_add_cylinder(head, 0.25, 0.25, 0.045, Vector3(0.0, 0.31, 0.0), Color("#1e6542"))
 	_add_sphere(head, Vector3(0.0, 0.37, 0.0), Vector3(0.38, 0.17, 0.34), tunic)
-	_add_cone(head, 0.20, 0.25, Vector3(0.0, 0.55, 0.07), tunic, Vector3(30.0, 0.0, 0.0))
+	_add_cone(head, 0.19, 0.31, Vector3(0.0, 0.55, 0.04), tunic, Vector3(46.0, 0.0, 0.0))
 
 	var left_arm := _attachment("left_arm")
 	_add_capsule(left_arm, 0.115, 0.48, Vector3(0.0, -0.12, 0.0), tunic_light, Vector3(0.0, 0.0, -14.0))
