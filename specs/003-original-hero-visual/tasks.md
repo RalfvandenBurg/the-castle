@@ -5,3 +5,4 @@
 - [x] T003 Flip the visual root with horizontal movement while preserving physics. `scripts/player.gd`
 - [x] T004 Document the visual feature and add it to the roadmap/changelog.
 - [ ] T005 Run Godot headless startup and inspect the model in a visible game run.
+- [x] T006 Refine the tunic and shield silhouette and attach the sword to the hand pivot using screenshot feedback.

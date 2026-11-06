@@ -8,6 +8,7 @@ Godot 4.7+, GDScript, the existing `CharacterBody3D`, and the side-on fixed came
 
 - Keep the capsule collider separate from the visible model.
 - Build the adventurer from low-poly boxes, capsules, spheres, and cylinders.
+- Use rounded geometry for the torso and shield, and build the sword around a shared hand pivot.
 - Use original colors and proportions: green clothing and cap, warm hair and skin, leather boots, a blue shield, and a steel sword.
 - Flip only the visual root on horizontal movement; leave physics and the fixed Z lane unchanged.
 
