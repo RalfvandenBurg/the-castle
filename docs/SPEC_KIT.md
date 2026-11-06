@@ -4,14 +4,17 @@ This repository has Spec Kit-compatible project artifacts. The constitution is i
 
 ## Codex integration status
 
-The Spec Kit CLI and Codex skills are not installed in the local environment yet because the system drive has no free space. The repository artifacts are ready to use. Once space is available, install the Codex integration for this existing project using the official instructions:
+This branch contains the Codex Spec Kit skills in `.agents/skills/speckit-*` and the PowerShell setup/template scripts in `.specify/scripts/powershell/`. The repository integration is present; a compatible local PowerShell runtime is needed to run these scripts. Godot remains the only gameplay runtime dependency.
+
+The active planned feature is [002-castle-section](../specs/002-castle-section/spec.md). The Git branch is `codex/100-room-plan`; feature directory names are independent of branch names. In another checkout, select this feature with the ignored local pointer before running plan/tasks:
 
 ```powershell
-uv tool install specify-cli
-specify integration install codex
+'{"feature_directory":"specs/002-castle-section"}' | Set-Content .specify/feature.json
 ```
 
-Alternatively, the official existing-project initializer is `specify init --here --force --integration codex`. Commit or back up current work first, and review the generated diff before accepting it.
+The specification, plan/design artifacts and tasks were authored using the checked-in skill workflow and resolver/setup scripts. This does not imply that gameplay implementation or Godot checks have run. See the feature's [validation guide](../specs/002-castle-section/quickstart.md).
+
+Official integration setup remains available if refreshing the integration: https://github.github.io/spec-kit/integrations/codex.html. Commit current work and review generated changes before refreshing.
 
 ## Workflow
 
