@@ -162,13 +162,13 @@ func _add_cylinder(parent: Node3D, top_radius: float, bottom_radius: float, heig
 	mesh.height = height
 	_add_mesh(parent, mesh, at, color)
 
-func _add_cone(parent: Node3D, radius: float, height: float, at: Vector3, color: Color) -> void:
+func _add_cone(parent: Node3D, radius: float, height: float, at: Vector3, color: Color, rotation_degrees: Vector3 = Vector3.ZERO) -> void:
 	var mesh := CylinderMesh.new()
 	mesh.top_radius = 0.0
 	mesh.bottom_radius = radius
 	mesh.height = height
 	mesh.radial_segments = 4
-	_add_mesh(parent, mesh, at, color)
+	_add_mesh(parent, mesh, at, color, rotation_degrees)
 
 func _add_mesh(parent: Node3D, mesh: Mesh, at: Vector3, color: Color, rotation_degrees: Vector3 = Vector3.ZERO, mesh_scale: Vector3 = Vector3.ONE) -> void:
 	var visual := MeshInstance3D.new()
