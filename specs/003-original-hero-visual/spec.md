@@ -10,7 +10,7 @@ As a player, I want a recognizable fantasy adventurer instead of a plain moving 
 
 - **FR-001:** Keep the existing `CharacterBody3D` movement and physics behavior.
 - **FR-002:** Replace the capsule rendering with a reusable 3D visual scene while keeping a separate collision shape.
-- **FR-003:** Give the hero a readable original silhouette with a green outfit, pointed cap, hair, face, and small travel gear; do not equip weapons or a shield.
+- **FR-003:** Give the hero a readable original silhouette with a green outfit, a fitted pointed cap, visible side-profile face and hair, and small travel gear; do not equip weapons or a shield.
 - **FR-004:** Turn the full character to face left or right with horizontal movement without changing the movement plane.
 - **FR-005:** Use built-in Godot meshes and materials; do not add external asset dependencies.
 - **FR-006:** Ensure the collision capsule covers the visible character's body closely enough for normal platforming.

@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+- Refined the face for the side-on view and reshaped the cap into a fitted crown with a shorter, softer point.
 - Fixed a cone mesh builder parameter mismatch that prevented the rigged character visual from loading.
 - Applied the skeleton's rest pose on initialization so attached model parts appear at their intended joints.
 - Removed the sword and shield and added small outfit details to the original adventurer.
