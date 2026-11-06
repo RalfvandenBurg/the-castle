@@ -1,7 +1,7 @@
 @tool
 extends Node3D
 
-const JOINT_AXIS := Vector3(0.0, 0.0, 1.0)
+const JOINT_AXIS := Vector3(1.0, 0.0, 0.0)
 
 var skeleton: Skeleton3D
 var _bone_indices: Dictionary = {}
@@ -96,7 +96,7 @@ func _build_model() -> void:
 	_add_sphere(head, Vector3(-0.19, -0.06, 0.12), Vector3(0.09, 0.16, 0.10), hair)
 	_add_sphere(head, Vector3(0.19, -0.06, 0.12), Vector3(0.09, 0.16, 0.10), hair)
 	_add_cylinder(head, 0.30, 0.30, 0.08, Vector3(0.0, 0.26, 0.0), tunic)
-	_add_cone(head, 0.25, 0.54, Vector3(-0.09, 0.49, 0.0), tunic, Vector3(0.0, 0.0, -23.0))
+	_add_cone(head, 0.25, 0.54, Vector3(-0.09, 0.49, 0.0), tunic, Vector3(23.0, 0.0, 0.0))
 	_add_sphere(head, Vector3(-0.19, 0.17, 0.07), Vector3(0.12, 0.07, 0.10), hair)
 
 	var left_arm := _attachment("left_arm")
@@ -116,7 +116,7 @@ func _build_model() -> void:
 	var sword_pivot := Node3D.new()
 	sword_pivot.name = "SwordPivot"
 	sword_pivot.position.z = 0.06
-	sword_pivot.rotation_degrees.z = -25.0
+	sword_pivot.rotation_degrees.x = 25.0
 	right_hand.add_child(sword_pivot)
 	_add_box(sword_pivot, Vector3(0.08, 0.20, 0.07), Vector3(0.0, 0.09, 0.0), leather)
 	_add_box(sword_pivot, Vector3(0.21, 0.06, 0.09), Vector3(0.0, 0.22, 0.0), gold)

@@ -12,7 +12,7 @@ Godot 4.7+, GDScript, the existing `CharacterBody3D`, and the side-on fixed came
 - Use original colors and proportions: green clothing and cap, warm hair and skin, leather boots, a blue shield, and a steel sword.
 - Add a 13-bone hierarchy and attach rigid low-poly parts to bone attachments, keeping the collider separate.
 - Drive a small procedural walk cycle by setting leg and opposite arm bone rotations from horizontal speed.
-- Flip only the visual root on horizontal movement; leave physics and the fixed Z lane unchanged.
+- Rotate only the visual root to face horizontal movement; leave physics and the fixed Z lane unchanged.
 
 ## Verification notes
 

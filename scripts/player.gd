@@ -12,6 +12,7 @@ var spawn_position: Vector3
 
 func _ready() -> void:
 	spawn_position = global_position
+	character_visual.rotation.y = PI * 0.5
 
 func _physics_process(delta: float) -> void:
 	if global_position.y < fall_limit:
@@ -21,7 +22,7 @@ func _physics_process(delta: float) -> void:
 
 	var direction := Input.get_axis("move_left", "move_right")
 	if not is_zero_approx(direction):
-		character_visual.scale.x = signf(direction)
+		character_visual.rotation.y = signf(direction) * PI * 0.5
 	var acceleration := ground_acceleration if is_on_floor() else air_acceleration
 	velocity.x = move_toward(velocity.x, direction * move_speed, acceleration * delta)
 
