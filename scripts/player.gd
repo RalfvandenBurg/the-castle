@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
-@export var move_speed: float = 7.0
-@export var ground_acceleration: float = 42.0
-@export var air_acceleration: float = 18.0
+@export var walk_speed: float = 3.2
+@export var run_speed: float = 6.8
+@export var ground_acceleration: float = 24.0
+@export var ground_deceleration: float = 30.0
+@export var air_acceleration: float = 12.0
 @export var jump_velocity: float = 10.5
 @export var lane_z: float = 0.0
 @export var fall_limit: float = -8.0
@@ -23,8 +25,12 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")
 	if not is_zero_approx(direction):
 		character_visual.rotation.y = signf(direction) * PI * 0.5
-	var acceleration := ground_acceleration if is_on_floor() else air_acceleration
-	velocity.x = move_toward(velocity.x, direction * move_speed, acceleration * delta)
+	var target_speed := run_speed if Input.is_action_pressed("run") else walk_speed
+	var target_velocity := direction * target_speed
+	var acceleration := air_acceleration
+	if is_on_floor():
+		acceleration = ground_deceleration if is_zero_approx(direction) else ground_acceleration
+	velocity.x = move_toward(velocity.x, target_velocity, acceleration * delta)
 
 	if not is_on_floor():
 		velocity.y -= get_gravity().length() * delta

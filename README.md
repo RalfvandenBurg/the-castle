@@ -11,6 +11,7 @@ An original 2.5D puzzle-platformer prototype inspired by the room-based structur
 
 - **A / Left Arrow:** move left
 - **D / Right Arrow:** move right
+- **Hold Shift:** run while moving
 - **Space:** jump
 
 Physics push blocks are in the first room. Falling below it returns the player to the start position.

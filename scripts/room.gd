@@ -16,7 +16,7 @@ func _ready() -> void:
 	_add_player(Vector3(-7.0, 0.35, 0.0))
 
 func _setup_controls() -> void:
-	for action in ["move_left", "move_right", "jump"]:
+	for action in ["move_left", "move_right", "jump", "run"]:
 		if not InputMap.has_action(action):
 			InputMap.add_action(action)
 		InputMap.action_erase_events(action)
@@ -26,6 +26,7 @@ func _setup_controls() -> void:
 	_bind_key("move_right", KEY_D)
 	_bind_key("move_right", KEY_RIGHT)
 	_bind_key("jump", KEY_SPACE)
+	_bind_key("run", KEY_SHIFT)
 
 func _bind_key(action: StringName, key: int) -> void:
 	var event := InputEventKey.new()

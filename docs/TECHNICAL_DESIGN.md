@@ -17,7 +17,8 @@
 - `scenes/main.tscn`: main scene entry point.
 - `scripts/room.gd`: builds the current prototype room, camera, input map, platforms, push blocks, and player.
 - `scripts/player.gd`: player movement, jumping, plane constraint, and fall recovery.
-- `scenes/hero_visual.tscn` and `scripts/hero_visual.gd`: reusable, original low-poly adventurer with a 13-bone `Skeleton3D` rig; the mesh parts and equipment follow bone attachments, and a procedural walk cycle rotates the limbs.
+- `scenes/hero_visual.tscn` and `scripts/hero_visual.gd`: reusable original low-poly adventurer with a 13-bone `Skeleton3D` rig; mesh parts follow bone attachments and procedural walk/run cycles rotate the limbs.
+- `scripts/player.gd`: gradual ground acceleration and braking, with a measured walk by default and a faster run while Shift is held.
 
 ## Planned scene evolution
 As the prototype grows, move room geometry to reusable scenes, add a room-transition/controller layer, and keep player, puzzle objects, doors, and UI as separate systems. Add new abstractions only when multiple rooms need them.

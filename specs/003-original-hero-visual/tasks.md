@@ -5,5 +5,7 @@
 - [x] T003 Flip the visual root with horizontal movement while preserving physics. `scripts/player.gd`
 - [x] T004 Document the visual feature and add it to the roadmap/changelog.
 - [ ] T005 Run Godot headless startup and inspect the model in a visible game run.
-- [x] T006 Refine the tunic and shield silhouette and attach the sword to the hand pivot using screenshot feedback.
-- [x] T007 Add a named 13-bone Skeleton3D, attach body parts and equipment to joints, and add a speed-driven walk cycle.
+- [x] T006 Refine the tunic silhouette; remove weapons and shield per player feedback.
+- [x] T007 Add a named 13-bone Skeleton3D, attach body parts to joints, and add speed-driven walk/run cycles.
+- [x] T008 Add deliberate ground acceleration, walk/run speeds, Shift run control, and update player controls documentation.
+- [ ] T009 Run Godot headless startup and inspect the model and movement in a visible game run.

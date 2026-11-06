@@ -13,6 +13,7 @@ The [nine-room feature](../../specs/002-castle-section/spec.md) now defines the 
 - [x] Push physics blocks
 - [x] Recover after falling
 - [x] Replace the placeholder capsule with an original rigged 3D adventurer model
+- [x] Add walk/run pacing and remove the hero's weapons and shield
 - [ ] Tune movement and camera after hands-on play
 
 ## 2. Room puzzle slice

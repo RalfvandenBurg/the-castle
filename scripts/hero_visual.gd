@@ -17,14 +17,18 @@ func _process(_delta: float) -> void:
 
 	var actor := get_parent() as CharacterBody3D
 	var movement_weight := 0.0
+	var run_weight := 0.0
 	if actor != null:
-		movement_weight = clampf(absf(actor.velocity.x) / 5.5, 0.0, 1.0)
+		movement_weight = clampf(absf(actor.velocity.x) / 2.8, 0.0, 1.0)
+		run_weight = clampf((absf(actor.velocity.x) - 3.0) / 3.8, 0.0, 1.0)
 
-	var stride := sin(float(Time.get_ticks_msec()) * 0.001 * 10.0) * 0.48 * movement_weight
+	var cadence := lerpf(7.0, 11.5, run_weight)
+	var stride := sin(float(Time.get_ticks_msec()) * 0.001 * cadence) * lerpf(0.28, 0.58, run_weight) * movement_weight
 	_set_bone_angle("left_leg", stride)
 	_set_bone_angle("right_leg", -stride)
-	_set_bone_angle("left_arm", -stride * 0.65)
-	_set_bone_angle("right_arm", stride * 0.65)
+	_set_bone_angle("left_arm", -stride * lerpf(0.72, 0.95, run_weight))
+	_set_bone_angle("right_arm", stride * lerpf(0.72, 0.95, run_weight))
+	_set_bone_angle("spine", -0.05 * run_weight * movement_weight)
 
 func _build_skeleton() -> void:
 	skeleton = Skeleton3D.new()
@@ -69,13 +73,13 @@ func _build_model() -> void:
 	var hair := Color("#d9a849")
 	var leather := Color("#613d32")
 	var gold := Color("#f2c45d")
-	var steel := Color("#d8e4e8")
-	var shield_blue := Color("#367a9b")
 
 	var pelvis := _attachment("pelvis")
 	_add_cylinder(pelvis, 0.25, 0.35, 0.48, Vector3.ZERO, tunic)
 	_add_box(pelvis, Vector3(0.53, 0.10, 0.04), Vector3(0.0, 0.15, 0.20), leather)
 	_add_box(pelvis, Vector3(0.12, 0.11, 0.04), Vector3(0.0, 0.15, 0.23), gold)
+	_add_box(pelvis, Vector3(0.19, 0.22, 0.12), Vector3(0.18, -0.10, 0.25), leather)
+	_add_box(pelvis, Vector3(0.12, 0.07, 0.04), Vector3(0.18, -0.07, 0.32), gold)
 
 	var spine := _attachment("spine")
 	_add_capsule(spine, 0.27, 0.72, Vector3.ZERO, tunic, Vector3.ZERO, Vector3(1.0, 1.0, 0.72))
@@ -103,26 +107,11 @@ func _build_model() -> void:
 	_add_capsule(left_arm, 0.115, 0.48, Vector3(0.0, -0.12, 0.0), tunic_light, Vector3(0.0, 0.0, -14.0))
 	var left_hand := _attachment("left_hand")
 	_add_sphere(left_hand, Vector3.ZERO, Vector3(0.10, 0.10, 0.10), skin)
-	_add_sphere(left_hand, Vector3(-0.09, 0.12, 0.01), Vector3(0.40, 0.48, 0.12), gold)
-	_add_sphere(left_hand, Vector3(-0.09, 0.12, 0.08), Vector3(0.34, 0.42, 0.11), shield_blue)
-	_add_sphere(left_hand, Vector3(-0.09, 0.12, 0.15), Vector3(0.08, 0.23, 0.035), gold)
-	_add_sphere(left_hand, Vector3(-0.09, 0.12, 0.16), Vector3(0.19, 0.07, 0.035), gold)
-	_add_sphere(left_hand, Vector3(-0.09, 0.12, 0.18), Vector3(0.06, 0.06, 0.04), Color("#fff0b1"))
 
 	var right_arm := _attachment("right_arm")
 	_add_capsule(right_arm, 0.115, 0.48, Vector3(0.0, -0.12, 0.0), tunic_light, Vector3(0.0, 0.0, 14.0))
 	var right_hand := _attachment("right_hand")
 	_add_sphere(right_hand, Vector3.ZERO, Vector3(0.11, 0.11, 0.11), skin)
-	var sword_pivot := Node3D.new()
-	sword_pivot.name = "SwordPivot"
-	sword_pivot.position.z = 0.06
-	sword_pivot.rotation_degrees.x = 25.0
-	right_hand.add_child(sword_pivot)
-	_add_box(sword_pivot, Vector3(0.08, 0.20, 0.07), Vector3(0.0, 0.09, 0.0), leather)
-	_add_box(sword_pivot, Vector3(0.21, 0.06, 0.09), Vector3(0.0, 0.22, 0.0), gold)
-	_add_sphere(sword_pivot, Vector3(0.0, 0.015, 0.0), Vector3(0.10, 0.10, 0.10), gold)
-	_add_box(sword_pivot, Vector3(0.09, 0.42, 0.055), Vector3(0.0, 0.46, 0.0), steel)
-	_add_cone(sword_pivot, 0.065, 0.18, Vector3(0.0, 0.73, 0.0), steel)
 
 	var left_leg := _attachment("left_leg")
 	_add_capsule(left_leg, 0.105, 0.46, Vector3.ZERO, Color("#e4c68f"))
