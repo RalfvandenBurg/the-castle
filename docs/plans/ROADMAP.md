@@ -12,7 +12,7 @@ The [nine-room feature](../../specs/002-castle-section/spec.md) now defines the 
 - [x] Keep the player on a 2.5D lane
 - [x] Push physics blocks
 - [x] Recover after falling
-- [x] Replace the placeholder capsule with an original 3D adventurer model
+- [x] Replace the placeholder capsule with an original rigged 3D adventurer model
 - [ ] Tune movement and camera after hands-on play
 
 ## 2. Room puzzle slice
